@@ -13,6 +13,7 @@ namespace Asteroidy
         public MainPage()
         {
             InitializeComponent();
+            
         }
     }
 }

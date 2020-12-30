@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asteroidy.View.AsteroidView">
+    <ContentPage.Content>
+        <StackLayout Spacing="10">
+            <Label Text="Asteroidy" FontSize="34" Padding="20" BackgroundColor="Black" TextColor="White"/>
+            <ListView x:Name="l_asteroids" ItemsSource="{Binding Asteroids}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                
+                                <Border BorderBrush="Red" CornerRadius="2,2,2,2" BorderThickness="2,2,2,2">
+                                    <StackLayout Spacing="5" Padding="10" Margin="10" BackgroundColor="White" >
+                                        <Label Text="{Binding Name}" FontSize="20" FontAttributes="Bold"></Label>
+                                        <Label Text="{Binding Description}" FontSize="14" TextColor="Gray"></Label>
+                                        <Button Text="ZOBRAZIT PODROBNOSTI"></Button>
+                                    </StackLayout>
+                                </Border>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

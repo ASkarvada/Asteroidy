@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Asteroidy.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Asteroidy
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new AsteroidView();
         }
 
         protected override void OnStart()
