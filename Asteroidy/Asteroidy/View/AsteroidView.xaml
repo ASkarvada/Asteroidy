@@ -5,19 +5,19 @@
     <ContentPage.Content>
         <StackLayout Spacing="10">
             <Label Text="Asteroidy" FontSize="34" Padding="20" BackgroundColor="Black" TextColor="White"/>
+            <Label x:Name="update" Margin="10,10,10,-5" Text="{Binding update}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
             <ListView x:Name="l_asteroids" ItemsSource="{Binding Asteroids}" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
+                        <ViewCell x:Name="vc">
                             <ViewCell.View>
-                                
-                                <Border BorderBrush="Red" CornerRadius="2,2,2,2" BorderThickness="2,2,2,2">
-                                    <StackLayout Spacing="5" Padding="10" Margin="10" BackgroundColor="White" >
-                                        <Label Text="{Binding Name}" FontSize="20" FontAttributes="Bold"></Label>
+                                <Frame CornerRadius="4" HasShadow="True" Padding="20" Margin="20">
+                                    <StackLayout Spacing="5"  BackgroundColor="White" >
+                                        <Label x:Name="label" Text="{Binding Name}" FontSize="20" FontAttributes="Bold"></Label>
                                         <Label Text="{Binding Description}" FontSize="14" TextColor="Gray"></Label>
-                                        <Button Text="ZOBRAZIT PODROBNOSTI"></Button>
+                                        <Button Text="ZOBRAZIT PODROBNOSTI" Clicked="Button_Clicked" Margin="0,10,0,-5"></Button>
                                     </StackLayout>
-                                </Border>
+                                </Frame>
                             </ViewCell.View>
                         </ViewCell>
                     </DataTemplate>

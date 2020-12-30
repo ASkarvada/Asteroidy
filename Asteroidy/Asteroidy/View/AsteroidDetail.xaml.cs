@@ -10,20 +10,14 @@ using Xamarin.Forms.Xaml;
 namespace Asteroidy.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AsteroidView : ContentPage
+    public partial class AsteroidDetail : ContentPage
     {
         AsteroidsListViewModel vm;
-        public AsteroidView()
+        public AsteroidDetail()
         {
             InitializeComponent();
             vm = new AsteroidsListViewModel();
-            l_asteroids.ItemsSource = vm.Asteroids;
-            update.Text = vm.UpdateText;
-        }
-
-        private void Button_Clicked(object sender, EventArgs e)
-        {
-            Application.Current.MainPage.Navigation.PushAsync(new AsteroidDetail(label));
+            //Name.Text = 
         }
     }
 }

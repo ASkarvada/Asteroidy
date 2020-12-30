@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asteroidy.View.AsteroidDetail">
+    <ContentPage.Content>
+        <StackLayout Spacing="10">
+            <Label Text="Detail asteroidu" FontSize="34" Padding="20" BackgroundColor="Black" TextColor="White"/>
+            <Frame CornerRadius="4" HasShadow="True" Padding="20" Margin="20">
+                <StackLayout Spacing="5"  BackgroundColor="White">
+                    <Label x:Name="Name" Text="{Binding Name}" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                    
+                    <Label Text="Datum přiblížení:" FontSize="16" TextColor="Gray" FontAttributes="Bold"></Label>
+                    <Label x:Name="CloseApproachDate" Text="{Binding CloseApproachDate}" FontSize="14" TextColor="Gray"></Label>
+                    
+                    <Label Text="Rychlost:" FontSize="16" TextColor="Gray" FontAttributes="Bold" Padding="0,10,0,0"></Label>
+                    <Label x:Name="Velocity_kms" Text="{Binding Velocity_kms}" FontSize="14" TextColor="Gray"></Label>
+                    <Label x:Name="Velocity_kmh" Text="{Binding Velocity_kmh}" FontSize="14" TextColor="Gray"></Label>
+
+                    <Label Text="Odhadovaný průměr:" FontSize="16" TextColor="Gray" FontAttributes="Bold" Padding="0,10,0,0"></Label>
+                    <Label x:Name="EstimatedDiameter_m" Text="{Binding EstimatedDiameter_m}" FontSize="14" TextColor="Gray"></Label>
+                    <Label x:Name="EstimatedDiameter_km" Text="{Binding EstimatedDiameter_km}" FontSize="14" TextColor="Gray"></Label>
+
+                    <Label Text="Vzdálenost od země" FontSize="16" TextColor="Gray" FontAttributes="Bold" Padding="0,10,0,0"></Label>
+                    <Label x:Name="MissDistance_km" Text="{Binding MissDistance_km}" FontSize="14" TextColor="Gray"></Label>
+                    <Label x:Name="MissDistance_au" Text="{Binding MissDistance_au}" FontSize="14" TextColor="Gray"></Label>
+                    <Label x:Name="MissDistance_LD" Text="{Binding MissDistance_LD}" FontSize="14" TextColor="Gray"></Label>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
