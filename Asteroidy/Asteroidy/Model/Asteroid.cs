@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Asteroidy
 {
-    class Asteroid
+    public class Asteroid
     {
         public string Name { get; set; }
         public DateTime CloseApproachDate { get; set; }

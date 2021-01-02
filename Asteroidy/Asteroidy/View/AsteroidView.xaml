@@ -15,7 +15,17 @@
                                     <StackLayout Spacing="5"  BackgroundColor="White" >
                                         <Label x:Name="label" Text="{Binding Name}" FontSize="20" FontAttributes="Bold"></Label>
                                         <Label Text="{Binding Description}" FontSize="14" TextColor="Gray"></Label>
-                                        <Button Text="ZOBRAZIT PODROBNOSTI" Clicked="Button_Clicked" Margin="0,10,0,-5"></Button>
+                                        <Button Text="ZOBRAZIT PODROBNOSTI" Clicked="Button_Clicked" BindingContext="{Binding .}" Margin="0,10,0,-5"/>
+                                        <!-- 
+                                        
+                                        Button sám o sobě nenese žádná data, potřebujeme jej spojit s asteroidem.
+                                        ListView poskytuje DataTemplate postupně všechny Asteroidy z Asteroids
+                                        Celý balík dat(v tomto případě celý Asteroid)
+                                        se odkazuje pomocí zkratky '.', ale zrovna tak jsme mohli poslat i jméno 
+                                        ( BindingContext={Binding Name} )
+                                        Tohle je lepší způsob.
+                                        
+                                        -->
                                     </StackLayout>
                                 </Frame>
                             </ViewCell.View>

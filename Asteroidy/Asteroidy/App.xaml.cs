@@ -11,7 +11,7 @@ namespace Asteroidy
         {
             InitializeComponent();
 
-            MainPage = new AsteroidView();
+            MainPage = new NavigationPage(new AsteroidView());
         }
 
         protected override void OnStart()
