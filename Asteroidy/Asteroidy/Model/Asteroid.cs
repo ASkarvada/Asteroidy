@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Asteroidy
 {
+
     public class Asteroid
     {
         public string Name { get; set; }
@@ -21,7 +22,7 @@ namespace Asteroidy
 
         public Asteroid(string name, DateTime closeApproachDate, double velocity_kms, double velocity_kmh, double estimatedDiameter_m_min, double estimatedDiameter_m_max, double estimatedDiameter_km_min, double estimatedDiameter_km_max, double missDistance_km, double missDistance_au, double missDistance_LD)
         {
-            Name = name;
+            this.Name = name;
             CloseApproachDate = closeApproachDate;
             Velocity_kms = velocity_kms;
             Velocity_kmh = velocity_kmh;
@@ -41,5 +42,8 @@ namespace Asteroidy
 Rychlost: {velocity_kms} km/s
 Odhadovaný průměr: {estimatedDiameter_m_min} - {estimatedDiameter_m_max} m";
         }
+
+       
+
     }
 }

@@ -4,9 +4,7 @@
              xmlns:local="clr-namespace:Asteroidy"
              x:Class="Asteroidy.MainPage">
 
-    <ContentPage.BindingContext>
-        <local:AsteroidsListViewModel/>
-    </ContentPage.BindingContext>
+    
     <ContentPage.Content>
         <StackLayout>
 

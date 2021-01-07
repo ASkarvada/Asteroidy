@@ -12,18 +12,18 @@ namespace Asteroidy.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AsteroidDetail : ContentPage
     {
-        AsteroidsListViewModel vm;
+        
         public AsteroidDetail()
         {
             InitializeComponent();
-            vm = new AsteroidsListViewModel();
-            //Name.Text = 
+
+            Name.Text = Velocity_kmh.ToString();
         }
 
         public AsteroidDetail(Asteroid a)
         {
             InitializeComponent();
-            vm = new AsteroidsListViewModel();
+           
             //Name.Text = 
         }
     }

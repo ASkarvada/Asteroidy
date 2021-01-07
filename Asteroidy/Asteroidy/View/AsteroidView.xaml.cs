@@ -6,19 +6,25 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Net.Http;
+using System.Net.Http.Json;
+using Asteroidy.Model;
 
 namespace Asteroidy.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AsteroidView : ContentPage
     {
-        AsteroidsListViewModel vm;
+       
+      
         public AsteroidView()
         {
             InitializeComponent();
-            vm = new AsteroidsListViewModel();
-            l_asteroids.ItemsSource = vm.Asteroids;
-            update.Text = vm.UpdateText;
+           NasaDataService nasaDataService = new NasaDataService();
+
+            l_asteroids.ItemsSource = nasaDataService.GetAsteroids();
+
+            update.Text = DateTime.Now.ToString();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
