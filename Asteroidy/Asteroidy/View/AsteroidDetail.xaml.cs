@@ -19,5 +19,12 @@ namespace Asteroidy.View
             vm = new AsteroidsListViewModel();
             //Name.Text = 
         }
+
+        public AsteroidDetail(Asteroid a)
+        {
+            InitializeComponent();
+            vm = new AsteroidsListViewModel();
+            //Name.Text = 
+        }
     }
 }

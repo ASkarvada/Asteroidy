@@ -23,7 +23,9 @@ namespace Asteroidy.View
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage.Navigation.PushAsync(new AsteroidDetail(label));
+            Application.Current.MainPage.Navigation.PushAsync(new AsteroidDetail(((sender as Button).BindingContext) as Asteroid));
+            // ((sender as Button).BindingContext) ... celý objekt svázaný s Button v XAML
+            // protože je typu object, musíme castovat na Asteroid (víme, že to je Asteroid, svázali jsme ho s Button v AsteroidView.xaml
         }
     }
 }
