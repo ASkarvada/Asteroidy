@@ -14,8 +14,7 @@
                                 <Frame CornerRadius="4" HasShadow="True" Padding="20" Margin="20">
                                     <StackLayout Spacing="5"  BackgroundColor="White" >
                                         <Label x:Name="label" Text="{Binding Name}" FontSize="20" FontAttributes="Bold"></Label>
-                                        <Label x:Name="label2" Text="{Binding Description}" FontSize="20" FontAttributes="Bold"></Label>
-                                        <!--<Label Text="{Binding Description}" FontSize="14" TextColor="Gray"></Label>-->
+                                        <Label x:Name="label2" Text="{Binding Description}" FontSize="14" TextColor="Gray"></Label>
                                         <Button Text="ZOBRAZIT PODROBNOSTI" Clicked="Button_Clicked" BindingContext="{Binding .}" Margin="0,10,0,-5"/>
                                         <!-- 
                                         
