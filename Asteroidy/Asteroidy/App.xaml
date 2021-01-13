@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Asteroidy.App">
     <Application.Resources>
-
+        <Color x:Key="NavigationBarColor">#000000</Color>
+        <Style TargetType="{x:Type NavigationPage}">
+            <Setter Property="BarBackgroundColor"
+                    Value="{StaticResource NavigationBarColor}">
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

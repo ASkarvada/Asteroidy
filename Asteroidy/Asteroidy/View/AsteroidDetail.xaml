@@ -2,12 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Asteroidy.View.AsteroidDetail">
+    
+    <NavigationPage.TitleView>
+        <Label Text="Detail asteroidu" FontSize="22" Margin="10,10,10,10" TextColor="White" />
+    </NavigationPage.TitleView>
+    
     <ContentPage.Content>
         <StackLayout Spacing="10">
-            <Label Text="Detail asteroidu" FontSize="34" Padding="20" BackgroundColor="Black" TextColor="White"/>
+            <!--<Label Text="Detail asteroidu" FontSize="34" Padding="20" BackgroundColor="Black" TextColor="White"/>-->
             <Frame CornerRadius="4" HasShadow="True" Padding="20" Margin="20">
                 <StackLayout Spacing="5"  BackgroundColor="White">
-                    <Label x:Name="Name" Text="{Binding Name}" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+                    <Label x:Name="Name" Text="{Binding Name}" FontSize="24" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="0,0,0,15"></Label>
                     
                     <Label Text="Datum přiblížení:" FontSize="16" TextColor="Gray" FontAttributes="Bold"></Label>
                     <Label x:Name="CloseApproachDate" Text="{Binding CloseApproachDate}" FontSize="14" TextColor="Gray"></Label>

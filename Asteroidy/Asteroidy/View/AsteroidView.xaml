@@ -2,10 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Asteroidy.View.AsteroidView">
+    
+    <NavigationPage.TitleView>
+        <Label Text="Asteroidy" FontSize="22" Margin="10,10,10,10" TextColor="White" />
+    </NavigationPage.TitleView>
+    
     <ContentPage.Content>
         <StackLayout Spacing="10">
-            <Label Text="Asteroidy" FontSize="34" Padding="20" BackgroundColor="Black" TextColor="White"/>
-            <Label x:Name="update" Margin="10,10,10,-5" Text="{Binding update}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+            <!--<Label Text="Asteroidy" FontSize="34" Padding="20" BackgroundColor="Black" TextColor="White"/>-->
+            <Label x:Name="update" Margin="10,20,10,-5" Text="{Binding update}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
             <ListView x:Name="l_asteroids" ItemsSource="{Binding Asteroids}" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>

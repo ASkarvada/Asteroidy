@@ -24,7 +24,7 @@ namespace Asteroidy.View
 
             l_asteroids.ItemsSource = nasaDataService.GetAsteroids();
 
-            update.Text = DateTime.Now.ToString();
+            update.Text = $"Naposledy aktualizováno: {DateTime.Now.ToString()}";
         }
 
         private void Button_Clicked(object sender, EventArgs e)
