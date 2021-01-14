@@ -9,6 +9,8 @@ using Asteroidy.Model;
 using System.Linq;
 using System.IO;
 using System.Threading.Tasks;
+using System.Text.Json;
+using Newtonsoft.Json;
 
 namespace Asteroidy
 {
@@ -23,7 +25,7 @@ namespace Asteroidy
 
         const string API_URL = "https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=kTlB1068LXF3IZeIHqWRPhMeFSNgvZVKyPOCRoRd";
 
-      
+
         public async Task<NasaResponse> SnatchData()
         {
             return await client.GetFromJsonAsync<NasaResponse>(API_URL).ConfigureAwait(false);
@@ -31,20 +33,25 @@ namespace Asteroidy
 
         public List<Asteroid> GetAsteroids()
         {
-            try
-            {
-                List<Asteroid> asteroids =  MapNasaResponseToAsteroids(SnatchData().Result);
-
-                //localStorage.lastChange = new DateTime(); 
-
-                return asteroids;
-            }
-            catch
-            {
-                
-                throw new Exception("Not implemented!");
-            }
-
+            //FileStream fs = new FileStream(@"C:\Users\adams\source\repos\Asteroidy\Asteroidy\Asteroidy\Resources\OfflineFile.txt", FileMode.OpenOrCreate);
+            List<Asteroid> asteroids = MapNasaResponseToAsteroids(SnatchData().Result);
+            //if (asteroids is null)
+            //{
+            //    StreamReader sr = new StreamReader(fs, Encoding.Default);
+            //    string input = sr.ReadToEnd();
+            //    sr.Close();
+            //    fs.Close();
+            //    asteroids = JsonConvert.DeserializeObject<List<Asteroid>>(input);
+            //}
+            //else
+            //{
+            //    string json = JsonConvert.SerializeObject(asteroids);
+            //    StreamWriter sw = new StreamWriter(fs, Encoding.Default);
+            //    sw.Write(json);
+            //    sw.Close();
+            //    fs.Close();
+            //}
+            return asteroids;
         }
 
         
